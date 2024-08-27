@@ -1,0 +1,35 @@
+
+class Teacher{
+	private String name;
+	private double yoe;
+	public Teacher(String name) {
+		this.name=name;
+		this.yoe=0.0;	
+	}
+	public Teacher(String name,double yoe) {
+		this.name=name;
+		this.yoe=yoe;
+	}
+	void display() {
+		System.out.println("Name: "+name+", year of experience: "+yoe);
+	}
+}
+public class Method_overloading_Teacher {
+
+	public static void main(String[] args) {
+		if(args.length==1) {
+			String name=args[0];
+			Teacher t=new Teacher(name);
+			t.display();
+		}else if(args.length==2) {
+			String name=args[0];
+			double exp=Double.parseDouble(args[1]);
+			Teacher t=new Teacher(name,exp);
+			t.display();
+		}else {
+			System.out.println("Please provide valid input.");
+		}
+
+	}
+
+}
