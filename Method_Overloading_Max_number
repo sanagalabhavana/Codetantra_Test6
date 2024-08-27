@@ -1,0 +1,26 @@
+
+public class Method_Overloading_Max_number {
+	public static int max(int n1,int n2) {
+		return Math.max(n1, n2);
+	}
+	public static int max(int n1,int n2,int n3) {
+		return Math.max(n1,Math.max(n2, n3));
+	}
+
+	public static void main(String[] args) {
+		if(args.length==2) {
+			int n1=Integer.parseInt(args[0]);
+			int n2=Integer.parseInt(args[1]);
+			int max=max(n1,n2);
+			System.out.println("Maximum of two numbers: "+max);
+		}else if (args.length==3) {
+			int n1=Integer.parseInt(args[0]);
+			int n2=Integer.parseInt(args[1]);
+			int n3=Integer.parseInt(args[2]);
+			int max=max(n1,n2,n3);
+			System.out.println("Maximum of three numbers: "+max);
+		}
+
+	}
+
+}
