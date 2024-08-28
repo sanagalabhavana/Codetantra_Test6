@@ -1,0 +1,50 @@
+
+class Order{
+	String name;
+	double price;
+	String specialInstructions;
+	public Order(String name) {
+		this.name=name;
+	}
+	public Order(String name,double price) {
+		this.name=name;
+		this.price=price;
+	}
+	public Order(String name,double price,String specialInstructions) {
+		this.name=name;
+		this.price=price;
+		this.specialInstructions=specialInstructions;
+	}
+	void display() {
+		System.out.println("Order: ");
+		System.out.println("Item: "+name);
+		System.out.println("Price: $"+price);
+		System.out.println("Special Instructions: "+specialInstructions);
+	}
+	
+}
+
+public class Constructor_MthodOverloading_Example {
+         public static void main(String[] args) {
+        	String itemname=args[0];
+        	double price=Double.parseDouble(args[1]);
+        	String specialInstructions=args[2];
+        	Order order;
+        	switch(args.length) {
+        	case 1:
+        		 order=new Order(itemname);
+        		break;
+        	case 2:
+        		
+        		 order=new Order(itemname,price);
+        		break;
+        	case 3:
+        		order=new Order(itemname,price,specialInstructions);
+        		break;
+        	default:
+        		System.out.println("Invalid number of arguments.");
+        	return;
+        	}
+        	order.display();
+         }
+}
