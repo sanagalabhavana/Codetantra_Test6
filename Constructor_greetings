@@ -1,0 +1,17 @@
+
+public class Constructor_greetings {
+	String name;
+	public  Constuctor_greetings(String name) {
+		this.name=name;
+	}
+    public void display() {
+    	System.out.println("Hello ,"+name+" welcome to codetantra");
+    }
+	public static void main(String[] args) {
+		Constuctor_greetings c1=new Constuctor_greetings(args[0]);
+		Constuctor_greetings c2=new Constuctor_greetings(args[1]);
+        c1.display();
+        c2.display();
+	}
+
+}
