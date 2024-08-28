@@ -1,0 +1,26 @@
+
+public class Constructor_MethodOverloading_sum {
+	public static double Total_sum(double n1,double n2) {
+		return n1+n2;
+	}
+     public static double Total_sum(double n1,double n2,double n3) {
+    	 return n1+n2+n3;
+     }
+	public static void main(String[] args) {
+		if(args.length==2) {
+			double n1=Double.parseDouble(args[0]);
+			double n2=Double.parseDouble(args[1]);
+			double sum=Total_sum(n1,n2);
+			System.out.println("Sum of two numbers: "+sum);
+			
+		}else if(args.length==3) {
+			double n1=Double.parseDouble(args[0]);
+			double n2=Double.parseDouble(args[1]);
+			double n3=Double.parseDouble(args[2]);
+			double sum=Total_sum(n1,n2,n3);
+			System.out.println("Sum of three numbers: "+sum);
+		}
+
+	}
+
+}
